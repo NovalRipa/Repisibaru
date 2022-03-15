@@ -1,0 +1,7 @@
+git init
+git config user.name "NovalRipa"
+git config user.email "rippa00@gmail.com"
+git remote add origin https://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@github.com/NovalRipa/pariwisataba.git
+git add .
+git commit -m "Oo"
+git push origin master
