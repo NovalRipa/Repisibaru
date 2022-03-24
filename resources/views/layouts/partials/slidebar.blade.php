@@ -17,9 +17,7 @@
     <ul class="nav menu">
         <li><a href="/admin"><em class='fa fa-dashboard' style='color: #ffdd00'>&nbsp;</em><b> Dashboard</b></a></li>
         <li><a href="{{route('barang.index')}}"><em class="fa fa-archive" style='color: #ffdd00'>&nbsp;</em><b> Barang </b></a></li>
-        {{-- <li><a href="{{route('report.cetak_laporan')}}"><em class="fa fa-calendar" style='color: #ffdd00'>&nbsp;</em><b> Laporan </b></a></li> --}}
-
-
+        {{-- <li><a href="{{url('admin/cetak-laporan')}}"><em class="fa fa-calendar" style='color: #ffdd00'>&nbsp;</em><b> Laporan </b></a></li> --}}
     </ul>
 </div>
 <!--/.sidebar-->

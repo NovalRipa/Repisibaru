@@ -37,6 +37,7 @@ class BarangController extends Controller
     public function create()
     {
         //
+        $suplier = Suplier::all();
         return view('admin.barang.create');
 
     }
@@ -53,7 +54,6 @@ class BarangController extends Controller
         $request->validate([
             'nama_barang' => 'required|unique:barangs',
             'harga' => 'required',
-            'tanggal_masuk' => 'required',
             'stok' => 'required',
             'deskripsi' => 'required',
             'cover' => 'required|image|max:2048',
@@ -62,7 +62,6 @@ class BarangController extends Controller
         $barang = new Barang;
         $barang->nama_barang = $request->nama_barang;
         $barang->harga = $request->harga;
-        $barang->tanggal_masuk = $request->tanggal_masuk;
 
 // upload image / foto
         if ($request->hasFile('cover')) {
@@ -103,7 +102,8 @@ class BarangController extends Controller
     {
         //
         $barang = Barang::findOrFail($id);
-        return view('admin.barang.edit', compact('barang'));
+        $suplier = Suplier::all();
+        return view('admin.barang.edit', compact('barang', 'suplier'));
 
     }
 
@@ -120,7 +120,7 @@ class BarangController extends Controller
         // $request->validate([
         //     'nama_barang' => 'required|unique:barangs',
         //     'harga' => 'required',
-        //     'tanggal_masuk' => 'required',
+        //     'suplier_id' => 'required',
         //     'stok' => 'required',
         //     'deskripsi' => 'required',
         //     'cover' => 'required|image|max:2048',
@@ -128,7 +128,6 @@ class BarangController extends Controller
 
         $barang = Barang::findOrFail($id);
         $barang->nama_barang = $request->nama_barang;
-        $barang->tanggal_masuk = $request->tanggal_masuk;
         // upload image / foto
         if ($request->hasFile('cover')) {
             $barang->deleteImage();

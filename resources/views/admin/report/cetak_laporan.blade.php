@@ -20,11 +20,13 @@
                         <center>
                             <tr>
                                 <th class="text-center">No</th>
+                                <th class="text-center">Tanggal Pesanan</th>
+                                <th class="text-center">Tanggal Masuk</th>
                                 <th class="text-center">Nama Barang</th>
                                 <th class="text-center">harga</th>
                                 <th class="text-center">Stok</th>
-                                <th class="text-center">Tanggal Masuk</th>
                                 <th class="text-center">Deskripsi</th>
+                                <th class="text-center">Total</th>
                             </tr>
                         </center>
                     </thead>
@@ -35,13 +37,11 @@
                                 <tr>
                                     <td>{{ $no++ }}</td>
                                     <td>{{ $data->tanggal_pesan }}</td>
-                                    <td>{{ $data->tanggal_bayar }}</td>
-                                    <td>{{ $data->pemesan }}</td>
+                                    <td>{{ $data->tanggal_masuk }}</td>
                                     <td>{{ $data->barang->nama_barang }}</td>
-                                    <td>0{{ $data->no_telephone }}</td>
-                                    <td>{{ $data->alamat }}</td>
-                                    <td>{{ $data->jumlah }}</td>
                                     <td>Rp. {{ number_format($data->barang->harga, 0, ',', '.') }}</td>
+                                    <td>{{ number_format($data->stok, 0, ',', '.')}}</td>
+                                    <td>{{ $data->deskripsi }}</td>
                                     <td>Rp. {{ number_format($data->total, 0, ',', '.') }}</td>
                                 </tr>
                             </center>

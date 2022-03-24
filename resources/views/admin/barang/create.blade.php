@@ -47,15 +47,6 @@
                                 </span>
                             @enderror
                         </div>
-                        <div class="form-group">
-                            <label for="">Tanggal Masuk</label>
-                            <input type="date" name="tanggal_masuk" class="form-control @error('tanggal_masuk') is-invalid @enderror" style="width:20%;" >
-                             @error('tanggal_masuk')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
                         <label for="">Deskripsi</label>
                              <textarea name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" id="" cols="5" rows="5">
                                 @error('deskripsi')

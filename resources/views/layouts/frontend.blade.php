@@ -36,7 +36,7 @@
 	<!--PreLoader-->
     <div class="loader">
         <div class="loader-inner">
-            <div class="circle"></div>
+
         </div>
     </div>
     <!--PreLoader Ends-->
@@ -117,6 +117,20 @@
 				</div>
 			</div>
 		</div>
+        <div class="single-homepage-slider homepage-bg-3">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10 offset-lg-1 text-center">
+						<div class="hero-text">
+							<div class="hero-text-tablecell">
+								<p class="subtitle">Produk</p>
+								<h1>Produk Di Jamin Baru</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- end home page slider -->
 
@@ -130,6 +144,7 @@
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-title">
 						<h3>Produk Mungkin yang anda suka</h3>
+                        <p style='color: #ffffff'>Produk</p>
 					</div>
 				</div>
 			</div>
@@ -149,8 +164,6 @@
 									</strong>Rp. {{ number_format($data->harga, 0, ',', '.') }} <br>
 									<Strong>Stok :
 									</strong>{{ number_format ($data->stok, 0, ',', '.') }} Unit <br>
-                                    <Strong>Tanggal :
-									</strong>{{$data->tanggal_masuk}}<br>
 									<hr>
                                     <Strong>Deskripsi :
 									</strong>{{ $data->deskripsi }}<br>
@@ -174,7 +187,7 @@
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-title">
 						<h3>Produk Baru</h3>
-						<p>Ini Hiasan Saja.</p>
+						<p style='color: #ffffff'>Ini Hiasan Saja.</p>
 					</div>
 				</div>
 			</div>

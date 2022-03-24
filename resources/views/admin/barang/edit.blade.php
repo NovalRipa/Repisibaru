@@ -39,15 +39,6 @@
                             </span>
                             @enderror
                         </div>
-                        <div class="form-group">
-                            <label for="">Tanggal Masuk</label>
-                            <input type="date" name="tanggal_masuk" value="{{$barang->tanggal_masuk}}" class="form-control @error('tanggal_masuk') is-invalid @enderror">
-                             @error('tanggal_masuk')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
                           <div class="form-group">
                               <label for="">Stok</label>
                               <input type="text" name="stok" value="{{$barang->stok}}" class="form-control @error('stok') is-invalid @enderror">
@@ -74,8 +65,8 @@
                             <input type="file" name="cover" class="form-control">
                         </div>
                         <div class="form-group">
-                            <button type="reset" class="btn btn-outline-warning">Reset</button>
-                            <button type="submit" class="btn btn-outline-primary">Simpan</button>
+                            <button type="reset" class="btn btn-warning">Reset</button>
+                            <button type="submit" class="btn btn-danger">Simpan</button>
                         </div>
                     </form>
                 </div>

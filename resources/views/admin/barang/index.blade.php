@@ -50,7 +50,6 @@
                     <th class="text-center">Nama Barang</th>
                     <th class="text-center">harga</th>
                     <th class="text-center">Stok</th>
-                    <th class="text-center">Tanggal Masuk</th>
                     <th class="text-center">Deskripsi</th>
                     <th class="text-center">Thumbnail</th>
                     <th class="text-center">Aksi</th>
@@ -64,7 +63,6 @@
                     <td class="text-center">{{$data->nama_barang}}</td>
                     <td class="text-center">Rp. {{ number_format($data->harga, 0, ',', '.') }}</td>
                     <td class="text-center">{{ number_format($data->stok, 0, ',', '.')}}</td>
-                    <td class="text-center">{{$data->tanggal_masuk}}</td>
                     <td class="text-center">{{$data->deskripsi}}</td>
                     <td class="text-center"><img src="{{$data->image()}}" alt="" style="width:100px; height:100px;" alt="cover"></td>
 

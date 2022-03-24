@@ -38,7 +38,7 @@
                                     <tr>
                                         <td>Deskripsi</td>
                                         <td>:</td>
-                                        <td>{{ $barang->deskripsi }} Units</td>
+                                        <td>{{ $barang->deskripsi }}</td>
                                     </tr>
                                     <tr>
                                         <td>Jumlah Pesan</td>

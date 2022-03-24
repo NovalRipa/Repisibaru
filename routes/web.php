@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\HistoryController;
@@ -8,7 +9,7 @@ use App\Http\Controllers\PesanController;
 use App\Http\Controllers\SuplierController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\UserController;
-use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -48,8 +49,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
         return view('admin.index');
     });
     Route::resource('barang', BarangController::class);
-    Route::resource('user', UserController::class);
     Route::resource('report', ReportController::class);
+    Route::post('form', [ReportController::class, 'laporan']);
     Route::get('cetak-laporan', [ReportController::class, 'laporan'])->name('getLaporan');
     Route::post('cetak-laporan', [ReportController::class, 'cetaklaporan'])->name('laporan');
 

@@ -18,7 +18,6 @@ class CreateBarangsTable extends Migration
             $table->string('nama_barang');
             $table->integer('harga')->unsigned;
             $table->integer('stok')->unsigned;
-            $table->date('tanggal_masuk');
             $table->string('cover')->nullable;
             $table->text('deskripsi');
             $table->timestamps();

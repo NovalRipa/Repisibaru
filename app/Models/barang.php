@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class barang extends Model
 {
     use HasFactory;
-    protected $fillable = ['nama_barang', 'harga', 'stok', 'tanggal_masuk', 'cover', 'deskripsi'];
-    protected $visible = ['nama_barang', 'harga', 'stok', 'tanggal_masuk', 'cover', 'deskripsi'];
+    protected $fillable = ['nama_barang', 'harga', 'stok', 'cover', 'deskripsi'];
+    protected $visible = ['nama_barang', 'harga', 'stok', 'cover', 'deskripsi'];
     public $timestamps = true;
 
     //membuat relasi one to many dengan model "wisata"
@@ -21,7 +21,7 @@ class barang extends Model
     {
         //data Model 'destinasi' bisa dimiliki oleh Model 'Author'
         //melalui fk "wisata-id"
-        return $this->belongsTo('App\Models\suplier', 'suplier_id');
+        return $this->belongsTo('App\Models\suplier');
     }
     public function image()
     {

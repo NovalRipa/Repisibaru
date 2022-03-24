@@ -1,5 +1,12 @@
 @extends('layouts.app')
 
+@section('js')
+
+<script src="{{asset('js/sweetalert2.js')}}"></script>
+<script src="{{asset('js/delete.js')}}"></script>
+
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row">
@@ -56,5 +63,6 @@
         </div>
     </div>
 </div>
+@include('sweetalert::alert')
 @endsection
 

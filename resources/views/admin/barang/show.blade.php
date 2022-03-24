@@ -26,10 +26,6 @@
                         <label for=""> Harga</label>
                         <input type="number" name="harga" value="{{$barang->harga}}" class="form-control" readonly>
                     </div>
-                    <div class="form-group">
-                        <label for="">Tanggal Masuk</label>
-                        <input type="date" name="tanggal_masuk" value="{{$barang->tanggal_masuk}}" class="form-control @error('amount') is-invalid @enderror" readonly>
-                    </div>
                      <div class="form-group">
                         <label for=""> Stok</label>
                         <input type="text" name="harga" value="{{$barang->harga}}" class="form-control" readonly>
